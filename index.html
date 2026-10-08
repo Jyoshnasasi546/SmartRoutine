@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>SmartRoutine</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <h1>SmartRoutine</h1>
+
+        <p class="tagline">
+            Plan • Adapt • Improve
+        </p>
+
+
+        <nav>
+
+    <button
+        class="nav-btn active"
+        data-page="dashboard">
+        🏠 Dashboard
+    </button>
+
+    <button
+        class="nav-btn"
+        data-page="routine">
+        📋 My Routine
+    </button>
+
+    <button
+        class="nav-btn"
+        data-page="calendar">
+        📅 Calendar
+    </button>
+
+    <button
+        class="nav-btn"
+        data-page="statistics">
+        📊 Statistics
+    </button>
+
+    <button
+        class="nav-btn"
+        data-page="settings">
+        ⚙️ Settings
+    </button>
+
+</nav>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+   <main class="main" id="mainContent">
+
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div>
+
+                <h2 id="greeting">
+                    Good Evening, Jyoshna 👋
+                </h2>
+
+                <p id="date"></p>
+
+            </div>
+
+
+            <div class="today-badge">
+
+                🔄 Daily Routine
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats">
+
+
+            <div class="stat-card">
+
+                <h3>Today's Progress</h3>
+
+                <p id="progress">
+                    0%
+                </p>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <h3>Total Tasks</h3>
+
+                <p id="totalTasks">
+                    0
+                </p>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <h3>Completed</h3>
+
+                <p id="completedTasks">
+                    0
+                </p>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <h3>🔥 Streak</h3>
+
+                <p id="streak">
+                    0 Days
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= SCORE ================= -->
+
+        <section class="score-section">
+
+            <div>
+
+                <h2>
+                    ⭐ Productivity Score
+                </h2>
+
+                <p>
+                    Your performance today
+                </p>
+
+            </div>
+
+
+            <div class="score">
+
+                <span id="productivityScore">
+                    0
+                </span>
+
+                <small>/100</small>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SCHEDULE ================= -->
+
+        <section class="schedule-section">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Today's Schedule
+                    </h2>
+
+                    <p id="scheduleMessage">
+                        Your routine is automatically
+                        generated every day.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RECOVERY -->
+
+            <div id="recoveryBox"
+                class="recovery-box">
+            </div>
+
+
+
+            <!-- TASKS -->
+
+            <div id="scheduleContainer"
+                class="schedule-container">
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= WEEKLY ================= -->
+
+        <section class="weekly-section">
+
+            <h2>
+                📊 Weekly Overview
+            </h2>
+
+            <div id="weeklyStats"
+                class="weekly-stats">
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

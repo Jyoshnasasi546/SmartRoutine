@@ -1,0 +1,1121 @@
+/* =================================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   BODY
+================================= */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #f5f7fb;
+
+    color: #1f2937;
+
+    display: flex;
+
+}
+
+
+/* =================================
+   SIDEBAR
+================================= */
+
+.sidebar {
+
+    width: 240px;
+
+    height: 100vh;
+
+    background: #111827;
+
+    color: white;
+
+    padding: 28px 18px;
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+}
+
+
+.sidebar h1 {
+
+    text-align: center;
+
+    font-size: 23px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.tagline {
+
+    text-align: center;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.sidebar nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.sidebar button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #cbd5e1;
+
+    padding: 13px;
+
+    border-radius: 9px;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+}
+
+
+.sidebar button:hover,
+
+.sidebar button.active {
+
+    background: #374151;
+
+    color: white;
+
+}
+
+
+/* =================================
+   MAIN
+================================= */
+
+.main {
+
+    margin-left: 240px;
+
+    width: calc(100% - 240px);
+
+    padding: 35px;
+
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.header h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.header p {
+
+    color: #6b7280;
+
+}
+
+
+.today-badge {
+
+    background: white;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,0.05);
+
+}
+
+
+/* =================================
+   STATS
+================================= */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.stat-card {
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.05);
+
+}
+
+
+.stat-card h3 {
+
+    font-size: 13px;
+
+    color: #6b7280;
+
+    margin-bottom: 10px;
+
+}
+
+
+.stat-card p {
+
+    font-size: 26px;
+
+    font-weight: bold;
+
+}
+
+
+/* =================================
+   SCORE
+================================= */
+
+.score-section {
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+
+}
+
+
+.score-section p {
+
+    color: #6b7280;
+
+    margin-top: 5px;
+
+}
+
+
+.score {
+
+    font-size: 35px;
+
+    font-weight: bold;
+
+}
+
+
+.score small {
+
+    font-size: 15px;
+
+    color: #9ca3af;
+
+}
+
+
+/* =================================
+   SCHEDULE
+================================= */
+
+.schedule-section {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.05);
+
+}
+
+
+.section-header {
+
+    margin-bottom: 22px;
+
+}
+
+
+.section-header h2 {
+
+    margin-bottom: 6px;
+
+}
+
+
+.section-header p {
+
+    color: #6b7280;
+
+}
+
+
+/* =================================
+   TASKS
+================================= */
+
+.schedule-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.task-card {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 17px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 11px;
+
+    transition: 0.2s;
+
+}
+
+
+.task-card:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.06);
+
+}
+
+
+.task-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.time {
+
+    min-width: 130px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #4f46e5;
+
+}
+
+
+.task-name {
+
+    font-weight: bold;
+
+}
+
+
+.category {
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+.complete-btn {
+
+    border: none;
+
+    background: #4f46e5;
+
+    color: white;
+
+    padding: 8px 13px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+.complete-btn:hover {
+
+    opacity: 0.9;
+
+}
+
+
+/* =================================
+   COMPLETED
+================================= */
+
+.task-card.completed {
+
+    background: #f0fdf4;
+
+    border-color: #86efac;
+
+}
+
+
+.task-card.completed .task-name {
+
+    text-decoration: line-through;
+
+    color: #6b7280;
+
+}
+
+
+/* =================================
+   MISSED
+================================= */
+
+.task-card.missed {
+
+    background: #fff7ed;
+
+    border-color: #fdba74;
+
+}
+
+
+.missed-label {
+
+    color: #c2410c;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-top: 4px;
+
+}
+
+
+/* =================================
+   RECOVERY
+================================= */
+
+.recovery-box {
+
+    display: none;
+
+    margin-bottom: 20px;
+
+    padding: 18px;
+
+    background: #fff7ed;
+
+    border: 1px solid #fdba74;
+
+    border-radius: 12px;
+
+}
+
+
+.recovery-box.show {
+
+    display: block;
+
+}
+
+
+.recovery-box h3 {
+
+    color: #c2410c;
+
+    margin-bottom: 8px;
+
+}
+
+
+.recovery-box p {
+
+    color: #555;
+
+    margin-bottom: 12px;
+
+}
+
+
+.recovery-btn {
+
+    background: #ea580c;
+
+    color: white;
+
+    border: none;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+.skip-btn {
+
+    background: #e5e7eb;
+
+    color: #374151;
+
+    border: none;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin-left: 8px;
+
+}
+
+
+/* =================================
+   WEEKLY
+================================= */
+
+.weekly-section {
+
+    margin-top: 22px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+}
+
+
+.weekly-section h2 {
+
+    margin-bottom: 18px;
+
+}
+
+
+.weekly-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.day-box {
+
+    text-align: center;
+
+    padding: 15px 8px;
+
+    background: #f9fafb;
+
+    border-radius: 10px;
+
+}
+
+
+.day-name {
+
+    font-size: 12px;
+
+    color: #6b7280;
+
+    margin-bottom: 8px;
+
+}
+
+
+.day-score {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 900px) {
+
+    .stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    .weekly-stats {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .sidebar {
+
+        display: none;
+
+    }
+
+    .main {
+
+        margin-left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+
+    }
+
+    .stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+    .task-card {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+
+    }
+
+    .weekly-stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+/* ==========================================
+   EXTRA PAGES
+========================================== */
+
+.page-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 22px;
+}
+
+.page-description {
+    color: #6b7280;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+
+/* My Routine */
+
+.routine-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.routine-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.routine-item p {
+    color: #6b7280;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.routine-time {
+    color: #4f46e5;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* Calendar */
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(7, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 20px 10px;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.calendar-day-name {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.calendar-date {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.calendar-progress {
+    color: #4f46e5;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.calendar-day p {
+    color: #6b7280;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+/* Statistics */
+
+.big-score {
+    font-size: 60px;
+    font-weight: bold;
+    color: #4f46e5;
+    margin: 20px 0;
+}
+
+
+/* Settings */
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.setting-item p {
+    color: #6b7280;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.setting-status {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+/* ==========================================
+   PHASE 5 - EXTRA PAGES
+========================================== */
+
+.page-card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.05);
+
+    margin-bottom: 22px;
+
+}
+
+
+.page-description {
+
+    color: #6b7280;
+
+    margin-top: 8px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* MY ROUTINE */
+
+.routine-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.routine-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 17px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+}
+
+
+.routine-item p {
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    margin-top: 4px;
+
+}
+
+
+.routine-time {
+
+    color: #4f46e5;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+}
+
+
+/* CALENDAR */
+
+.calendar-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+}
+
+
+.calendar-day {
+
+    text-align: center;
+
+    padding: 20px 10px;
+
+    background: #f9fafb;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+}
+
+
+.calendar-day-name {
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+}
+
+
+.calendar-date {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    margin: 8px 0;
+
+}
+
+
+.calendar-progress {
+
+    color: #4f46e5;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+.calendar-day p {
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+
+}
+
+
+/* STATISTICS */
+
+.big-score {
+
+    font-size: 60px;
+
+    font-weight: bold;
+
+    color: #4f46e5;
+
+    margin: 20px 0;
+
+}
+
+
+/* SETTINGS */
+
+.setting-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 0;
+
+    border-bottom:
+        1px solid #e5e7eb;
+
+}
+
+
+.setting-item p {
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+
+}
+
+
+.setting-status {
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .calendar-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    .routine-item {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+}
+.edit-task {
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.edit-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.edit-row input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.task-name {
+    flex: 1;
+}
+
+.delete-task {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.routine-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.routine-buttons button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
